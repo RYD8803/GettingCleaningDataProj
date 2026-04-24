@@ -36,23 +36,24 @@ Each measured variables have mean() and std() measurements, which can be seen in
 
 Variable names are constructed as follows:
 
--  t: Time domain signal
+-  Time: Time domain signal
 
--  f: Frequency domain signal
+-  Frequency: Frequency domain signal
 
--  BodyAcc: Body acceleration
+-  BodyAccelerometer: Body accelerometer
 
--  GravityAcc: Gravity acceleration
+-  GravityAccelerometer: Gravity accelerometer
 
--  Gyro: Gyroscope measurements
+-  Gyroscope: Gyroscope measurements
 
--  mean(): Mean value of the signal
+-  Mag: Magnitude
 
--  std(): Standard deviation of the signal
+-  Mean: Mean value of the signal
+
+-  Std: Standard deviation of the signal
 
 -  X, Y, Z: Directional axes
-
-Example: tBodyAcc-mean()-X represent mean of body acceleration in X direction (time domain).
+  
 
 **Data Transformation Steps**
 

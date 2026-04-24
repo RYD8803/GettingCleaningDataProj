@@ -100,6 +100,17 @@ new_dataset <- bind_cols(subject, activ, std_data, mean_data)
 # Renaming the activities
 new_dataset$Activity <- act_label[new_dataset$Activity, 2]
 
+#Renaming the variables to be descriptives
+current_names <- names(new_dataset)
+current_names <- gsub("^t", "Time", current_names)
+current_names <- gsub("^f", "Frequency", current_names)
+current_names <- gsub("Acc", "Accelerometer", current_names)
+current_names <- gsub("Gyro", "Gyroscope", current_names)
+current_names <- gsub("Mag", "Magnitude", current_names)
+current_names <- gsub("-mean\\(\\)", "Mean", current_names)
+current_names <- gsub("-std\\(\\)", "Std", current_names)
+names(new_dataset) <- current_names
+
 # Creating tidy dataset for each subject and activity
 tidy_dataset <- new_dataset %>%
     group_by(Subject, Activity) %>%
